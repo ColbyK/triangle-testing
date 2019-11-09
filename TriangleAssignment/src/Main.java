@@ -12,12 +12,13 @@ public class Main {
 		// 		For false input coverage
 		// 			Enter an invalid triangle choice
 		// 			Enter an invalid double entry
-		// 			Enter a negative side value
 		Triangle tri = specifiedTriangle();
 		tri.printTypes();
 		// Do manual input for point triangle
 		Triangle tri2 = specifiedTriangle();
 		tri2.printTypes();
+		// Create negative side
+		Assert.assertTrue(Arrays.equals(sideTriangle(-2, 2, 4).getResults(), getBools(false, 	false, 		false, 		false)));
 		// Create invalid side triangle
 		Assert.assertTrue(Arrays.equals(sideTriangle(2, 2, 4).getResults(), getBools(false, 	false, 		false, 		false)));
 		// Create invalid point triangle
